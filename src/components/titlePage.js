@@ -2,7 +2,6 @@ import React from 'react';
 
 
 function TitlePage() {
-
     return (
         <div>
             <main role = "main">
@@ -19,6 +18,7 @@ function TitlePage() {
             <footer role = "content-info">Footer</footer>
             </main>
         </div>
+        
     );
 }
 
