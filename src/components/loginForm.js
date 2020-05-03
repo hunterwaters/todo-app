@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom'
       email: "",
       password: ""
     }
+  }
     handleChange = event => {
       this.setState({
         [event.target.name]:event.target.value
@@ -18,7 +19,7 @@ import ReactDOM from 'react-dom'
     }
     handleSubmit = event => {
       event.preventDefault();
-    }
+    
       console.log("Email:" + this.state.email)
       console.log("Password:" + this.state.password)
       
@@ -28,7 +29,8 @@ import ReactDOM from 'react-dom'
         method: 'POST',
         body:JSON.stringify(data),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         }
       })
         .then(res => res.json ())
