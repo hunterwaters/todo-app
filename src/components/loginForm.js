@@ -24,7 +24,7 @@ import ReactDOM from 'react-dom'
       console.log("Password:" + this.state.password)
       
       const data = {email: this.state.email, password: this.state.password}
-         
+      
       fetch( 'http://localhost:7000/api/login', {
         method: 'POST',
         body:JSON.stringify(data),
@@ -33,7 +33,10 @@ import ReactDOM from 'react-dom'
           'Accept': 'application/json',
         }
       })
-        .then(res => res.json ())
+      
+        .then(res => {
+          console.log(res) 
+          return res.json ()})
         .catch(error => console.log('Error:', error))
         .then(response => console.log('Success', response));}
   
