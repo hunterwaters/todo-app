@@ -37,23 +37,6 @@ export default class TodoList extends Component {
     );
   };
 
-  // Add Todo
-
-  /*
-  addTodo = title => {
-    axios
-      .post('https://jsonplaceholder.typicode.com/todos', {
-        title,
-        completed: false
-      })
-      .then(res => {
-        res.data.id = uuid.v4();
-        this.setState({ todos: [...this.state.todos, res.data] });
-      });
-  };
-
-  */
-
   render() {
         return (
           <div>

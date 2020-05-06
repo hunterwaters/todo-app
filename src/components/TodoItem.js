@@ -8,6 +8,7 @@ export class TodoItem extends Component {
       padding: '0px',
       borderBottom: '2px #ccc dotted',
       margin: '0 auto',
+      width: '620px',
       textDecoration: this.props.todo.completed ? 'line-through' : 'none'
     }
   }
@@ -23,7 +24,7 @@ export class TodoItem extends Component {
              Summary:    {summary}
              <br />
                Date:   {date}
-          <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>Delete</button>
+          <button className = "delete" onClick={this.props.delTodo.bind(this, id)}>Delete</button>
         </p>
       </div>
     )
@@ -37,15 +38,6 @@ TodoItem.propTypes = {
   delTodo: PropTypes.func.isRequired,
 }
 
-const btnStyle = {
-  background: '#ff0000',
-  color: '#fff',
-  border: 'none',
-  padding: '3px 8px',
-  borderRadius: '50%',
-  cursor: 'pointer',
-  float: 'right',
-  margin: '0 auto'
-}
+
 
 export default TodoItem
