@@ -12,7 +12,7 @@ export default class TodoList extends Component {
 
   componentDidMount() {
     axios
-      .get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .get('http://localhost:7000/api/todolist')
       .then(res => this.setState({ todos: res.data }));
   }
 
@@ -30,7 +30,7 @@ export default class TodoList extends Component {
 
   // Delete Todo
   delTodo = id => {
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`).then(res =>
+    axios.delete(`http://localhost:7000/api/todolist/${id}`).then(res =>
       this.setState({
         todos: [...this.state.todos.filter(todo => todo.id !== id)]
       })
@@ -38,6 +38,8 @@ export default class TodoList extends Component {
   };
 
   // Add Todo
+
+  /*
   addTodo = title => {
     axios
       .post('https://jsonplaceholder.typicode.com/todos', {
@@ -49,6 +51,8 @@ export default class TodoList extends Component {
         this.setState({ todos: [...this.state.todos, res.data] });
       });
   };
+
+  */
 
   render() {
         return (
