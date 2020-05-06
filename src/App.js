@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import TodoList from './components/toDoList'
@@ -7,7 +7,10 @@ import LoginForm from './components/loginForm'
 import TodoForm from './components/addTodo';
 
 
-export default function App() {
+class App extends Component {
+
+  render() {
+
   return (
     <Router className = "router">
       <div>
@@ -35,4 +38,7 @@ export default function App() {
     </Router>
   );
 }
+}
+
+export default App;
 

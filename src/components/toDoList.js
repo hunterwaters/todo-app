@@ -1,60 +1,65 @@
 import React, { Component } from 'react' ;
+import axios from 'axios'
+import {v4 as uuid} from 'uuid';
+import Todos from './Todos';
 
 
 export default class TodoList extends Component {
 
+  state = {
+    todos: []
+  };
+
+  componentDidMount() {
+    axios
+      .get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .then(res => this.setState({ todos: res.data }));
+  }
+
+  // Toggle Complete
+  markComplete = id => {
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed;
+        }
+        return todo;
+      })
+    });
+  };
+
+  // Delete Todo
+  delTodo = id => {
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`).then(res =>
+      this.setState({
+        todos: [...this.state.todos.filter(todo => todo.id !== id)]
+      })
+    );
+  };
+
+  // Add Todo
+  addTodo = title => {
+    axios
+      .post('https://jsonplaceholder.typicode.com/todos', {
+        title,
+        completed: false
+      })
+      .then(res => {
+        res.data.id = uuid.v4();
+        this.setState({ todos: [...this.state.todos, res.data] });
+      });
+  };
+
   render() {
         return (
-            <div>
-                <h1>Todo List</h1>
-                 <div class = "container">
-        <table>
-  <tr>
-    <th>ToDo Title</th>
-    <th>ToDo Summary</th>
-    <th>Date</th>
-    <th>Delete a ToDo</th>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 1</td>
-    <td>01/22/2020</td><button type = "submit" className = "delete">Delete -</button>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 2</td>
-    <td>01/22/2020</td>
-    <button type = "submit" className = "delete">Delete -</button>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 3</td>
-    <td>01/22/2020</td>
-    <button type = "submit" className = "delete">Delete -</button>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 4</td>
-    <td>01/22/2020</td>
-    <button type = "submit" className = "delete">Delete -</button>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 5</td>
-    <td>01/22/2020</td>
-    <button type = "submit" className = "delete">Delete -</button>
-  </tr>
-  <tr>
-    <td>Take out Trash</td>
-    <td>This is example number 6</td>
-    <td>01/22/2020</td>
-    <button type = "submit" className = "delete">Delete -</button>
-  </tr>
-</table>
-        </div>
-        <button type = "submit">Logout</button>
-        <button type = "submit">Sync to Calendar</button>
+          <div>
+            <h1> ToDo List</h1>
     <footer role = "content-info">Footer</footer>
+    <Todos todos = {this.state.todos}
+            markComplete = {this.markComplete}
+            delTodo = {this.delTodo} />
+            <button type = "submit">Logout</button>
+        <button type = "submit">Sync to Calendar</button>
     </div>
         );
     }
