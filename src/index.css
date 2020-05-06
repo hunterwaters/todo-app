@@ -8,14 +8,6 @@ body {
   background-image: url(./images/mountains.jpg);
 }
 
-.signup-form {
-  font-size: 15px;
-  width: 270px;
-  height: 270px;
-  margin: 0 auto;
-  padding: 3px;
-  background-color: cornsilk;
-}
 
 .login-form  {
   text-align: center;
@@ -39,12 +31,12 @@ body {
 
 h1 {
   margin-top: 10px;
-  font-size: 40px;
+  font-size: 50px;
   color:  yellow;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 45px;
   color: yellow;
 }
 
@@ -67,13 +59,17 @@ h2 {
 }
 
 section {
-  height: 60px;
-  width: 600px;
+  height: 140px;
+  width: 650px;
   padding: 10px 10px;
   background-color: #bbb;
   font-size: 12px;
   margin: 0 auto;
-  
+  border-radius: 5px;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 footer {

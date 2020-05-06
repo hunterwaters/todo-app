@@ -1,7 +1,9 @@
-import React from 'react' ;
+import React, { Component } from 'react' ;
 
 
-function TodoList() {
+export default class TodoList extends Component {
+
+  render() {
         return (
             <div>
                 <h1>Todo List</h1>
@@ -56,6 +58,4 @@ function TodoList() {
     </div>
         );
     }
-
-
-export default TodoList;
+  }

@@ -45,10 +45,12 @@ export default class addtodo extends Component{
       .then(response => console.log('Success', response));
     }
   render() {
+
     return (
+  
         <main role = "main">
         <h1>New ToDo</h1>
-        <form onSubmit = {this.handleSubmit} className = "todo-Form">
+        <form onSubmit = {this.handleSubmit} className = "todo-Form" >
           <div className="todoTitle">
             <label htmlFor="toDo-title">ToDo title</label>
             <br />

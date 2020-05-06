@@ -1,7 +1,7 @@
 import React from "react";
 import {
   BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import TodoList from './ToDoList'
+import TodoList from './components/toDoList'
 import TitlePage from './components/titlePage'
 import LoginForm from './components/loginForm'
 import TodoForm from './components/addTodo';
