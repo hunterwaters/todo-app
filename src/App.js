@@ -3,9 +3,8 @@ import {
   BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import TodoList from './ToDoList'
 import TitlePage from './components/titlePage'
-import SignupForm from './components/signupForm'
 import LoginForm from './components/loginForm'
-import TodoForm from './components/todoForm';
+import TodoForm from './components/addTodo';
 
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <TitlePage />
-            <SignupForm />
           </Route>
           <Route path="/login">
             <LoginForm />
