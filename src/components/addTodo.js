@@ -28,6 +28,8 @@ export default class addtodo extends Component{
   
 
     const data = {title: this.state.title, summary: this.state.summary, date: this.state.date}
+
+
   
     fetch('http://localhost:7000/api/addtodo', {
       method: 'POST',
@@ -67,8 +69,9 @@ export default class addtodo extends Component{
             <input type= "date"  className = "date" name = "date" placeholder = "Date" required onChange = {this.handleChange}  />
             <button type="submit">Add +</button>
             </div>
+            <footer role = "content-info">Stay on Track!</footer>
         </form>
         </main>
-    );
-}
+      );
+  }
 }

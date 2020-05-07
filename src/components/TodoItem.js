@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 export class TodoItem extends Component {
   getStyle = () => {
     return {
-      background: '#f4f4f4',
-      padding: '0px',
-      borderBottom: '2px #ccc dotted',
+      background: '#162E5B',
+      padding: '2px',
+      borderBottom: '5px #ccc dotted',
+      border: '2px solid white',
       margin: '0 auto',
+      color: 'white',
       width: '620px',
       textDecoration: this.props.todo.completed ? 'line-through' : 'none'
     }

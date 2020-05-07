@@ -41,12 +41,11 @@ export default class TodoList extends Component {
         return (
           <div>
             <h1> ToDo List</h1>
-    <footer role = "content-info">Footer</footer>
+            <button className = "logout " type = "submit">Logout</button>
+    <footer role = "content-info">Stay on Track!</footer>
     <Todos todos = {this.state.todos}
             markComplete = {this.markComplete}
             delTodo = {this.delTodo} />
-            <button type = "submit">Logout</button>
-        <button type = "submit">Sync to Calendar</button>
     </div>
         );
     }

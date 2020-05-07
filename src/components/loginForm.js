@@ -2,7 +2,6 @@ import React, { Component} from 'react'
 import ReactDOM from 'react-dom'
 
 
-
  export default class Login extends Component {
 
   constructor() {
@@ -59,9 +58,8 @@ import ReactDOM from 'react-dom'
               onChange = {this.handleChange}  />
               </div>
               <button type = "submit">Login</button>
-              <button type = "submit">Register</button>
               </form>
-    <footer role = "content-info">Footer</footer>
+    <footer role = "content-info">Stay on Track!</footer>
     </main>
         )
     }

@@ -15,7 +15,7 @@ function TitlePage() {
             <section>
                 <h3>"The only difference between a mob and a trained army is organization.” ~ Calvin Coolidge</h3>
             </section>
-            <footer role = "content-info">Footer</footer>
+            <footer role = "content-info">Stay on Track!</footer>
             </main>
         </div>
         
