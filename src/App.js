@@ -15,7 +15,7 @@ class App extends Component {
   return (
     <Router className = "router">
       <div className = "navbar">
-            <Link to="/">Home || </Link>
+            <Link to="/"> Home || </Link>
             <Link to="/login">Login ||  </Link>
             <Link to="/addtodo">Add-Todo || </Link>
             <Link to="/todolist"> Todo-List </Link>

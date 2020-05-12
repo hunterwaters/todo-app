@@ -2,9 +2,13 @@ import React, { Component } from 'react' ;
 import axios from 'axios'
 import {v4 as uuid} from 'uuid';
 import Todos from './Todos';
+import {
+  BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 
 export default class TodoList extends Component {
+
+
 
   state = {
     todos: []
@@ -40,8 +44,8 @@ export default class TodoList extends Component {
   render() {
         return (
           <div>
-            <h1> ToDo List</h1>
-            <button className = "logout " type = "submit">Logout</button>
+            <h1> Todo-List</h1>
+            <Link to ="/">  Logout</Link>
     <footer role = "content-info">Stay on Track!</footer>
     <Todos todos = {this.state.todos}
             markComplete = {this.markComplete}

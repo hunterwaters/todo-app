@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 
  export default class Login extends Component {
 
+
   constructor() {
     super()
     this.state = {
@@ -18,11 +19,13 @@ import ReactDOM from 'react-dom'
     }
     handleSubmit = event => {
       event.preventDefault();
+
     
       console.log("Email:" + this.state.email)
       console.log("Password:" + this.state.password)
-      
+
       const data = {email: this.state.email, password: this.state.password}
+      
       
       fetch( 'http://localhost:7000/api/login', {
         method: 'POST',
@@ -36,6 +39,11 @@ import ReactDOM from 'react-dom'
         .then(res => {
           console.log(res) 
           return res.json ()})
+         //.then(data => {
+          // if(data.login) {
+             //this.props.history.push("/todolist")
+           //}
+         //})
         .catch(error => console.log('Error:', error))
         .then(response => console.log('Success', response));}
   

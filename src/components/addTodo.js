@@ -51,7 +51,7 @@ export default class addtodo extends Component{
     return (
   
         <main role = "main">
-        <h1>New ToDo</h1>
+        <h1>Add-Todo</h1>
         <form onSubmit = {this.handleSubmit} className = "todo-Form" >
           <div className="todoTitle">
             <label htmlFor="toDo-title">ToDo title</label>

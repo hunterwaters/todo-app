@@ -13,7 +13,12 @@ function TitlePage() {
                 <h3>"Three Rules of Work: Out of clutter find simplicity; From discord find harmony; In the middle of difficulty lies opportunity." ~ Albert Einstein</h3>
             </section>
             <section>
-                <h3>"The only difference between a mob and a trained army is organization.” ~ Calvin Coolidge</h3>
+                <h3>"The only difference between a mob and a trained army is organization." ~ Calvin Coolidge</h3>
+            </section>
+            <section>
+                <h3>
+                "To accomplish great things, we must not only act, but also dream; not only plan, but also believe." ~Anatole France
+                </h3>
             </section>
             <footer role = "content-info">Stay on Track!</footer>
             </main>
