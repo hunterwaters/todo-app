@@ -39,11 +39,7 @@ import ReactDOM from 'react-dom'
         .then(res => {
           console.log(res) 
           return res.json ()})
-         //.then(data => {
-          // if(data.login) {
-             //this.props.history.push("/todolist")
-           //}
-         //})
+      
         .catch(error => console.log('Error:', error))
         .then(response => console.log('Success', response));}
   
